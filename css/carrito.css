@@ -1,96 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-body, ul, h1, p {
-    margin: 0; /* Eliminar márgenes por defecto */
+/* Efecto hover para el botón */
+#boton-carrito:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
 }
 
-body {
-    font-family: "Playfair Display", serif; /* Fuente para el cuerpo */
-    font-size: 20px;
+/* Efecto al hacer clic en el botón */
+#boton-carrito:active {
+    background-color: #388e3c;
 }
 
-main {
-    height: auto;
-    background-color: rgb(242, 242, 242);
-    text-align: center;
-    padding: 25px;
-}
-
-main h1 {
-    text-align: center;
-    font-family: "Playfair Display", serif;
-    font-size: 50px;
-    color: #413f3e;
-}
-
-/* Estilos para el contenedor del carrito */
-.carrito-container {
-    display: flex;               /* Usar flexbox */
-    flex-direction: column;      /* Colocar elementos en columna */
-    align-items: center;         /* Centrar horizontalmente */
-    justify-content: center;     /* Centrar verticalmente */
-    height: 100px;              /* Altura fija del contenedor */
-}
-
-/* Estilo para el nav */
-header nav {
-    background-color: #413f3e;  /* Color de fondo del nav */
-    width: 100%;                 /* Ancho completo */
-    display: flex;               /* Usar flexbox */
-    justify-content: center;      /* Centrar contenido horizontalmente */
-}
-
-header nav ul {
-    width: 80%;                  /* Ancho de la lista */
-    list-style: none;            /* Eliminar puntos de la lista */
-    padding: 0;                  /* Eliminar padding */
-    margin: 0;                   /* Eliminar margen */
-    display: flex;               /* Usar flexbox */
-    justify-content: space-between; /* Espacio entre elementos */
-}
-
-header nav ul li {
-    flex: 1;                     /* Cada li ocupará el mismo espacio */
-    margin: 0 10px;              /* Espacio horizontal entre los elementos */
-}
-
-header nav ul li a {
-    text-decoration: none;        /* Sin subrayado en los enlaces */
-    height: 54px;                /* Altura del enlace */
-    display: block;              /* Mostrar como bloque */
-    background-color: #413f3e;   /* Color de fondo del enlace */
-    color: #ffffff;              /* Color del texto */
-    padding: 0 10px;             /* Relleno horizontal para aumentar el área clickeable */
-    font-family: "Playfair Display", serif; /* Fuente */
-    font-size: 20px;             /* Tamaño de fuente */
-    text-align: center;          /* Centrar texto */
-    line-height: 54px;           /* Centrar verticalmente el texto */
-}
-
-#cart-list {
-    list-style-type: none; /* Eliminar los puntos de la lista */
-    padding: 0;            /* Eliminar el padding */
-    margin: 0;             /* Eliminar el margen */
-}
-
-/* Ocultar la lista si está vacía */
-.carrito-container ul {
-    display: none; /* Ocultar por defecto */
-}
-
-.carrito-container ul:has(li) {
-    display: flex; /* Mostrar si hay al menos un li */
-}
-
-/* Estilo para los botones */
-button {
-    margin-top: 20px;  
-    padding: 10px 20px;         
-    height: 50px;      
-    font-size: 20px;
-    font-family: "Playfair Display", serif; /* Fuente */
-    background-color: #413f3e;   /* Color de fondo */
-    color: white;                /* Color del texto */
-    border-radius: 5px;
-
-}

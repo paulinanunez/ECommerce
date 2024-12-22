@@ -16,7 +16,6 @@ main h1 {
 }
 
 
-
 .contacto-form {
     background-color: #413f3e;
     font-family: "Playfair Display", serif;
@@ -70,3 +69,130 @@ main label {
     font-size: 20px;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    background-color: rgb(242, 242, 242);
+}
+
+/* Estilos para el main */
+main {
+    height: auto;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Títulos principales */
+main h1 {
+    font-size: 50px;
+    color: #413f3e;
+}
+
+main h2 {
+    font-size: 40px;
+    color: #413f3e;
+}
+
+
+.input-group {
+    text-align: center;
+    padding: 3px;
+}
+
+main label {
+    color: #ffffff;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+main label[for="envio"] {
+    display: inline-block; /* Corrección de 'inline-lock' a 'inline-block' */
+    margin: 10px 0;
+}
+
+main button {
+    display: block;
+    margin: 15px auto;
+    height: 40px;
+    width: 40%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #130f40;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-family: "Playfair Display", serif; /* Fuente */
+}
+
+main input {
+    width: 70%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #a8a8a8;
+    color: black; /* Cambiado a negro para mejor legibilidad */
+    font-size: 20px;
+}
+
+main input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+
+}
+/* ---------------- Modal ---------------- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Para ocultar el modal */
+.modal.ocultar {
+    display: none;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    position: relative; /* Necesario para colocar el cierre correctamente */
+}
+
+/* Estilos del botón de cierre (X) */
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px; /* Aumenta el tamaño */
+    font-weight: bold;
+    color: black; /* Color del X */
+    cursor: pointer;
+}
+
+/* Lista de productos en el carrito */
+#modal-cart-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#modal-cart-list li {
+    margin-bottom: 10px;
+    text-align: left;
+}

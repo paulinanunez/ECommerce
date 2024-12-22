@@ -1,3 +1,57 @@
+/* Estilos de la Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.ocultar {
+    display: none;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+#modal-cart-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#modal-cart-list li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#modal-cart-total {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* Estilos generales */
@@ -160,24 +214,4 @@ td:nth-child(7) { /* Se refiere a la columna de la descripción larga */
 #modal-cart-list li {
     margin-bottom: 10px;
     text-align: left;
-}
-
-.error-detail {
-    color: red;
-    font-size: 12px;
-    display: none;
-}
-
-.mensaje-enviado {
-    background-color: #4CAF50; /* Grön bakgrund */
-    color: white; /* Vit text */
-    padding: 10px;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-.ocultar {
-    display: none;
 }

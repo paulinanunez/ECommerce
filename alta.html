@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/alta.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
+    <link rel="stylesheet" href="css/modal.css">
+
 </head>
 <body>
     <header>
@@ -14,24 +16,26 @@
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./alta.html">Alta</a></li>
-                <li><a href="./carrito.html">Carrito</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
                 <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="#" id="boton-carrito">Carrito</a></li> <!-- Botón para abrir el carrito -->
+            </ul>
             </ul>
         </nav>
         <div>
             <div id="logo">Dress 2 Impress</div>
             <div id="barra-busqueda">
                 <form action="#">
+                    <label for="Buscar"></label>
                     <input type="text" placeholder="Buscar">
                     <input type="submit" value="Buscar">
                 </form>
-                <a href="./carrito.html" id="boton-carrito">Carrito</a>
             </div>
         </div>
     </header>
-
+   
     <main>
+ 
         <h1>Alta de Productos</h1>
         <form onsubmit="agregar(event)" class="alta-form">
             <div class="input-group">
@@ -60,26 +64,65 @@
                 <div class="error-detail"></div>
             </div>
             <div class="input-group">
-                <label for="detalles">detalles</label>
-                <input id="detalles" type="text" name="detalles" placeholder="Detalles">
+                <label for="descripcion1">Descripción corta</label>
+                <input id="descripcion1" type="text" name="descripcion1" placeholder="Descripción corta">
                 <div class="error-detail"></div>
             </div>
+
+            <div class="input-group">
+                <label for="descripcion2">Descripción larga</label>
+                <input id="descripcion2" type="text" name="descripcion2" placeholder="Descripción larga">
+                <div class="error-detail"></div>
+            </div>
+
             <div class="input-group">
                 <label for="foto">foto</label>
                 <input id="foto" type="text" name="foto" placeholder="Url de imagen">
                 <div class="error-detail"></div>
             </div>
+
+            <div class="input-group">
+                <label for="edad-desde">edad-desde</label>
+                <input id="edad-desde" type="number" name="edad-desde" placeholder="Edad desde..." min="0">
+                <div class="error-detail"></div>
+            </div>
+            
+            <div class="input-group">
+                <label for="edad-hasta">edad-hasta</label>
+                <input id="edad-hasta" type="number" name="edad-hasta" placeholder="Edad hasta..." min="0">
+                <div class="error-detail"></div>
+            </div>
+            
+
             <div class="input-group">
                 <input id="envio" type="checkbox" name="envio">
-                <label for="envio">envío</label>
+                <label for="envio">Envío sin carga</label>
             </div>
             <button type="submit">Agregar</button>
         </form>
+
+        <div id="mensaje-enviado" class="mensaje-enviado ocultar">
+            El formulario está enviado.
+        </div>
+        
 
         <hr>
 
         <h2>Lista de productos disponibles</h2>
         <table id="tabla-productos"></table>
+
+        <div id="modal" class="modal ocultar">
+            <div class="modal-content">
+                <span class="cerrar-modal">&times;</span>
+                <h2>Carrito</h2>
+                <ul id="modal-cart-list">
+                
+                </ul>
+                <div id="modal-cart-total"></div>
+                
+                <button id="mandar-pedido">Mandar pedido</button>
+            </div>
+        
     </main>
 
     <footer>
@@ -89,5 +132,8 @@
     <script src="js/productos.js"></script>
     <script src="js/alta.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/modal.js"></script> 
+
+
 </body>
 </html>

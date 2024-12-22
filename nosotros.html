@@ -6,6 +6,8 @@
     <title>ECommerce (nosotros)</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/nosotros.css">
+    <link rel="stylesheet" href="css/modal.css">
+
 </head>
 <body>
     
@@ -14,9 +16,10 @@
             <ul>
                    <li><a href="./index.html">Inicio</a></li>
                    <li><a href="./alta.html">Alta</a></li>
-                   <li><a href="./carrito.html">Carrito</a></li>
                    <li><a href="./contacto.html">Contacto</a></li>
                    <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="#" id="boton-carrito">Carrito</a></li> <!-- Botón para abrir el carrito -->
+                   
                </ul>
            
        </nav>
@@ -28,10 +31,10 @@
                     <input type="text" placeholder="Buscar">
                     <input type="submit" value="Buscar">
                 </form>
-        <a href="./carrito.html" id="boton-carrito">Carrito</a>
     </header>
 
-    <main>
+<main>
+ 
         <h1>Nosotros</h1>
 
         <p>Bienvenidos! <br> Yo soy Paulina Nuñez y soy la dueña de este webshop!<br><br>
@@ -39,6 +42,20 @@
             No dudes en contactarme por si tiene alguna duda. <br> 
             Espero que encuentres algo que te guste!
         </p>
+<!-- Modal -->
+<div id="modal" class="modal ocultar">
+    <div class="modal-content">
+        <span class="cerrar-modal">&times;</span>
+        <h2>Carrito</h2>
+        <ul id="modal-cart-list">
+           
+        </ul>
+        <div id="modal-cart-total"></div> 
+       
+        <button id="mandar-pedido">Mandar pedido</button>
+    </div>
+</div>
+
     </main>
 
 
@@ -49,5 +66,12 @@
     
     <script src="js/nosotros.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+
+
+
+    
 </body>
 </html>

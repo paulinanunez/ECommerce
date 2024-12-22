@@ -6,20 +6,21 @@
     <title>ECommerce (contacto)</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/modal.css">
+
 </head>
 <body>
     
     <header>
         <nav class="header-nav">
             <ul>
-                   <li><a href="./index.html">Inicio</a></li>
-                   <li><a href="./alta.html">Alta</a></li>
-                   <li><a href="./carrito.html">Carrito</a></li>
-                   <li><a href="./contacto.html">Contacto</a></li>
-                   <li><a href="./nosotros.html">Nosotros</a></li>
-               </ul>
-           
-       </nav>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./alta.html">Alta</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="#" id="boton-carrito">Carrito</a></li> 
+            </ul>
+        </nav>
         <div>
             <div id="logo">Dress 2 Impress</div>
             <div id="barra-busqueda">
@@ -28,11 +29,15 @@
                     <input type="text" placeholder="Buscar">
                     <input type="submit" value="Buscar">
                 </form>
-        <a href="./carrito.html" id="boton-carrito">Carrito</a>
-        
+            </div>
+        </div>
+    </header>
+
     </header>
 
     <main>
+       
+        </div>
         <h1>Contacto</h1> 
         <form id="contacto-form" class="contacto-form">
             <div class="input-group">
@@ -61,15 +66,33 @@
 
             <input type="submit" value="Enviar" id="enviar-boton">
         </form>
+    
+<!-- Modal -->
+<div id="modal" class="modal ocultar">
+    <div class="modal-content">
+        <span class="cerrar-modal">&times;</span>
+        <h2>Carrito</h2>
+        <ul id="modal-cart-list">
+        
+        </ul>
+        <div id="modal-cart-total"></div>
+       
+        <button id="mandar-pedido">Mandar pedido</button>
+    </div>
+</div>
+
+
     </main>
 
     <footer>
         <h3>Copyright 2024</h3>
     </footer>
 
-    
-
     <script src="js/contacto.js"></script>
+    <script src="js/productos.js"></script>
     <script src="js/main.js"></script>    
+    <script src="js/modal.js"></script>    
+    <script src="js/carrito.js"></script>
+
 </body>
 </html>

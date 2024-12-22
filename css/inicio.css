@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* Estilos para el main */
 main {
     height: auto;
-    background-color: rgb(242, 242, 242);
     text-align: center;
     padding: 25px;
+}
+
+/* Títulos principales */
+main h1 {
+    font-size: 50px;
+    color: #413f3e;
+}
+
+main h2 {
+    font-size: 40px;
+    color: #413f3e;
 }
 
 section img {
@@ -21,20 +32,19 @@ main .section-cards-body {
 }
 
 section {
-    border: 0.5px solid black; /* Corregido de balck a black */
+    border: 0.5px solid black;
     width: 350px;
     padding: 15px;
     background-color: #413f3e;
     color: rgb(255, 255, 255);
     margin: 25px;
-    border-radius: 5px; /* Ajustado a 5px para mayor consistencia */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto al pasar el mouse */
 section:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 section h3 {
@@ -54,14 +64,75 @@ section h3 {
     margin-bottom: 10px;
 }
 
-button {
-    margin-top: 20px;  
-    padding: 10px 20px;         
-    height: 40px;                /* Altura del botón */
-    background-color: white;     /* Color de fondo */
-    color: #413f3e;              /* Color del texto */
-    font-family: "Playfair Display", serif; /* Fuente */
-    font-size: 20px;
-    border-radius: 5px;
+body {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    background-color: rgb(242, 242, 242);
+}
 
+
+
+.add-to-cart-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    min-width: 250px;
+    height: auto;
+    background-color: #413f3e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* ---------------- Modal ---------------- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Para ocultar el modal */
+.modal.ocultar {
+    display: none;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    position: relative; /* Necesario para colocar el cierre correctamente */
+}
+
+/* Estilos del botón de cierre (X) */
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px; /* Aumenta el tamaño */
+    font-weight: bold;
+    color: black; /* Color del X */
+    cursor: pointer;
+}
+
+/* Lista de productos en el carrito */
+#modal-cart-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#modal-cart-list li {
+    margin-bottom: 10px;
+    text-align: left;
 }

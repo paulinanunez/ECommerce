@@ -2,126 +2,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box; 
+}
+
 body, ul, h3, h1, p {
     margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: "Lora", serif;
     background-color: rgb(242, 242, 242);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 header {
-    /* border: 1px solid magenta; */
     width: 100%;
     height: auto;
 }
+
 header nav {
-    background-color: #413f3e;  /* Color de fondo del nav */
-    width: 100%;                 /* Ancho completo */
-    display: flex;               /* Usar flexbox */
-    justify-content: center;      /* Centrar contenido horizontalmente */
+    background-color: #413f3e;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 header nav ul {
-    width: 80%;                  /* Ancho de la lista */
-    list-style: none;            /* Eliminar puntos de la lista */
-    padding: 0;                  /* Eliminar padding */
-    margin: 0;                   /* Eliminar margen */
-    display: flex;               /* Usar flexbox */
-    justify-content: space-between; /* Espacio entre elementos */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1000px;
 }
 
 header nav ul li {
-    flex: 1;                     /* Cada li ocupará el mismo espacio */
+    flex: 1;
 }
 
 header nav ul li a {
-    text-decoration: none;        /* Sin subrayado en los enlaces */
-    height: 54px;                /* Altura del enlace */
-    display: block;              /* Mostrar como bloque */
-    background-color: #413f3e;   /* Color de fondo del enlace */
-    color: #ffffff;              /* Color del texto */
-    padding: 0 10px;             /* Relleno horizontal */
-    font-family: "Playfair Display", serif; /* Fuente */
-    font-size: 20px;             /* Tamaño de fuente */
-    text-align: center;          /* Centrar texto */
-    line-height: 54px;           /* Centrar verticalmente el texto */
+    text-decoration: none;
+    height: 54px;
+    display: block;
+    background-color: #413f3e;
+    color: #ffffff;
+    padding: 0 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 54px;
 }
 
 /* -------------------------- */
 header > div {
     background-color: #413f3e;
     width: 100%;
-    /* height: 180px; */
-
     display: flex;
-    /* justify-content: space-around;
-    align-items: center; */
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 #logo {
-    font-family: "Cookie", cursive; 
-    height: 60px;
-    width: 15%;
-    background-color: #413f3e;
+    font-family: "Cookie", cursive;
+    font-size: 50px;
     color: white;
-    text-align: center;
-    line-height: 54px;
-    font-size: 45px;
+    text-align: left;
+    flex-grow: 0;
+    width: auto;
+    letter-spacing: 2px;
+    padding-left: 20px;
 }
 
 #barra-busqueda {
     height: 54px;
-    width: 85%;
+    width: 60%; 
     background-color: #413f3e;
-    /* text-align: center;
-    line-height: 54px; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin-left: 0; 
+    margin-right: 0;
 }
 
 #barra-busqueda form {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    /* border: 1px solid cyan; */
     width: 100%;
-}
-
-#boton-carrito {
-    height: 54px;
-    width: 5%;
-    background-color: #ffffff;
-    text-align: center;
-    line-height: 54px;
-    font-size: 20px;
-    border-radius: 5px;
-    margin-right: 50px;
-    margin-bottom: 20px;
-    font-family: "Playfair Display", serif;
-    
 }
 
 #barra-busqueda form input {
     background-color: #a8a8a8;
     padding: 2px;
-    width: 50%;
+    width: 90%;
     color: white;
-    height: 20px;
-    margin: 0 2px 0 5px;    
+    height: 30px;
+    margin: 0;
     font-family: "Playfair Display", serif;
     font-size: 18px;
+    border-radius: 5px;
 }
 
 #barra-busqueda form input[type="submit"] {
     background-color: white;
     color: #413f3e;
     padding: 2px;
-    width: 100px;
-    height: 30px;
-    margin-left: 20px;
+    width: 80px;
+    height: 36px;
+    margin-left: 5px;
     border-radius: 5px;
     font-family: "Playfair Display", serif;
     font-size: 20px;
@@ -129,17 +126,151 @@ header > div {
 
 /* --------------------------- */
 main {
+    width: 100%;
+    max-width: 100%;
     height: 550px;
+    margin: 0 auto;
 }
+
+.ocultar {
+    display: none;
+}
+
+.mensaje-confirmacion {
+    position: fixed;
+    top: 10px; /* Cambia a "top" para que el mensaje aparezca en la parte superior */
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    z-index: 1000;
+}
+
+.ocultar {
+    display: none;
+}
+
 
 /* --------------------------- */
 footer {
-    background-color: #413f3e; /* Color de fondo del footer */
-    font-family: "Cookie"; 
+    background-color: #413f3e;
+    font-family: "Cookie";
     color: white;
-    height: 100px;             /* Altura del footer */
-    text-align: center;       
-    line-height: 100px;        /* Centrar texto verticalmente */
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
     font-size: 30px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    background-color: rgb(242, 242, 242);
+}
+
+/* Estilos para el main */
+main {
+    height: auto;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Títulos principales */
+main h1 {
+    font-size: 50px;
+    color: #413f3e;
+}
+
+main h2 {
+    font-size: 40px;
+    color: #413f3e;
+}
+
+
+main label {
+    color: #ffffff;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+main label[for="envio"] {
+    display: inline-block; /* Corrección de 'inline-lock' a 'inline-block' */
+    margin: 10px 0;
+}
+
+main button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #130f40;
+    cursor: pointer;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    min-width: 200px;
+    width: 100%; /* Gör knappen lika bred som sin container */
+}
+
+
+/* ---------------- Modal ---------------- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Para ocultar el modal */
+.modal.ocultar {
+    display: none;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    position: relative; /* Necesario para colocar el cierre correctamente */
+}
+
+/* Estilos del botón de cierre (X) */
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px; /* Aumenta el tamaño */
+    font-weight: bold;
+    color: black; /* Color del X */
+    cursor: pointer;
+}
+
+/* Lista de productos en el carrito */
+#modal-cart-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#modal-cart-list li {
+    margin-bottom: 10px;
+    text-align: left;
+}
